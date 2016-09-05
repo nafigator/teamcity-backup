@@ -17,7 +17,7 @@ export TEAMCITY_APP_DIR="${TC_INSTALL_DIR}/webapps/ROOT"
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::")
 export JRE_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
-. ./functions.sh
+. $(dirname $0)/functions.sh
 
 parse_options "$@" || exit $?
 check_dependencies  || exit $?
