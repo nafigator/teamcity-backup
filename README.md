@@ -1,2 +1,2 @@
 # teamcity-backup
-Shell script for backup TeamCity
+Shell script for TeamCity backup
