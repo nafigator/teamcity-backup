@@ -22,7 +22,7 @@ export JRE_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 parse_options "$@" || exit $?
 check_dependencies  || exit $?
 
-[ ! -z ${PREVIOUS_BACKUPS_CLEANUP} ] && backups_cleanup
+[ -z ${PREVIOUS_BACKUPS_CLEANUP} ] || backups_cleanup
 
 debug 'Open TeamCity binary dir'
 cd ${TC_INSTALL_DIR}/bin
