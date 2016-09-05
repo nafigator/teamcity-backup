@@ -19,6 +19,8 @@ warning() {
 check_dependencies() {
 	local commands='rm cd'
 	local result=0
+	local script_path=${TC_INSTALL_DIR}/bin/maintainDB.sh
+
 	for i in ${commands}; do
 		command -v ${i} >/dev/null 2>&1
 		if [ $? -eq 0 ]; then
@@ -29,8 +31,10 @@ check_dependencies() {
 		fi
 	done
 
-	if [ ! -x ${TC_INSTALL_DIR}/bin/maintainDB.sh ]; then
-		warning "${TC_INSTALL_DIR}/bin/maintainDB.sh script not available"
+	if [ -x ${script_path} ]; then
+		debug "Check $script_path ... OK"
+	else
+		warning "${script_path} script not available"
 		result=1
 	fi
 
