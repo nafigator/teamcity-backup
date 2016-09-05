@@ -48,7 +48,7 @@ usage_help() {
 Options:
   -v, --version              Show script version
   -h, --help                 Show this help message
-  -d, --debug                Run program in debug mode
+  -d, --debug                Run script in debug mode
 
 EOL
 }
