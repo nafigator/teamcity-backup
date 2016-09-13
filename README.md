@@ -1,3 +1,5 @@
+[![GitHub license][License img]][License src]
+
 # teamcity-backup
 Bash script for TeamCity backup
 
@@ -19,3 +21,6 @@ For every day backup in 01.00 add line:
 ```bash
 0	1	*	*	*	/full_path_to/teamcity-backup.sh -d >>/var/log/teamcity-backup.log 2>&1
 ```
+
+  [License img]: https://img.shields.io/badge/license-BSD3-brightgreen.svg
+  [License src]: https://tldrlegal.com/license/bsd-3-clause-license-(revised)
